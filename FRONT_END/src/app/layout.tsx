@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MiniAppReady from "../app/components/MiniAppReady";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,9 +44,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ToastContainer 
-          position="top-right" 
-          autoClose={3000} 
+        <MiniAppReady />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
