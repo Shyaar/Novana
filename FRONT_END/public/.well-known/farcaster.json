@@ -1,0 +1,17 @@
+{
+  "miniapp": {
+    "name": "Novana",
+    "slug": "novana",
+    "description": "Decentralized, privacy-focused peer-support mini-app for mental health.",
+    "version": "1.0.0",
+    "icon": "https://novanaxyz.vercel.app/icon.png",
+    "splash": {
+      "background_color": "#ffffff",
+      "image": "https://novanaxyz.vercel.app/splash.png"
+    },
+    "actions": {
+      "open_url": "https://novanaxyz.vercel.app/",
+      "default": "https://novanaxyz.vercel.app/"
+    }
+  }
+}

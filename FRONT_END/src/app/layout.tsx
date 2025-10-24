@@ -7,17 +7,29 @@ import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-import { headers } from "next/headers"; // added
+import { headers } from "next/headers";
 import ContextProvider from "@/app/context";
 import Nav from "./components/nav-footer/nav";
 import Footer from "./components/nav-footer/footer";
 
 export const metadata: Metadata = {
   title: "Novana",
-  icons: {
-    icon: "/logo.png", // Path in the /public folder
-  },
   description: "You are not alone in this one",
+  icons: {
+    icon: "/logo.png",
+  },
+  other: {
+    // 👇 This adds the Farcaster Mini App meta tag automatically
+    "fc:miniapp": JSON.stringify({
+      name: "Novana",
+      action_url: "https://novanaxyz.vercel.app/",
+      icon: "https://novanaxyz.vercel.app/logo.png",
+      splash: {
+        image: "https://novanaxyz.vercel.app/splash.png",
+        background_color: "#ffffff",
+      },
+    }),
+  },
 };
 
 export default async function RootLayout({
@@ -42,7 +54,11 @@ export default async function RootLayout({
           pauseOnHover
           theme="light"
         />
-        <ContextProvider cookies={cookies}>{children}</ContextProvider>
+        <ContextProvider cookies={cookies}>
+          <Nav />
+          {children}
+          <Footer />
+        </ContextProvider>
       </body>
     </html>
   );
