@@ -49,10 +49,12 @@ export default function Home() {
   async function initializeUser() {
     if (isLoading || hasRegistered.current) return;
 
-    if (!farcasterId) {
-      toast.error("Farcaster ID not detected. Please log in.");
-      return;
-    }
+    // if (!farcasterId) {
+    //   toast.error("Farcaster ID not detected. Please log in.");
+    //   return;
+    // }
+
+    const farcasterId = Math.floor(Math.random() * 1e12).toString();
 
     if (isRegistered && userData) {
       const { name, avatar } = userData;
