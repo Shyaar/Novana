@@ -22,7 +22,7 @@ contract DeployNovana is Script {
 
         // === 3. Deploy SupportRoom (needs both registries) ===
         Novana novana = new Novana(
-            address(0xe2F6e27b4c2880E8E4738cf0b3Bf5b187977d6b0),
+            address(userRegistry),
             address(counselorRegistry)
         );
         console.log("SupportRoom deployed at:", address(novana));

@@ -14,7 +14,7 @@ export function Header({
   showSearch = true,
 }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-40 bg-white ">
+    <header className="sticky top-0 z-50 bg-white ">
       <div className="flex flex-col justify-between px-4 py-4">
 
         <div className="flex items-center gap-2 border-b pb-2 border-gray-400 mb-3">

@@ -9,12 +9,17 @@ import useRoomStore from "../../store/useRoomStore";
 import UiButton from "../components/ui/modals/uiButton";
 import { ArrowLeft } from "lucide-react";
 import { useReadRooms, useJoinRoom } from "../../hooks/usePlatformHook";
+import { useEffect, useState } from "react"; // Import useEffect and useState
+import LoadingModal from "../components/ui/modals/LoadingModal";
 
 export default function DiscoverPage() {
   const router = useRouter();
   const { setRoom } = useRoomStore();
   const { rooms, isLoading, isError, refetch } = useReadRooms();
-  const { joinRoom, isPending } = useJoinRoom();
+  const { joinRoom, isPending, isConfirming, isConfirmed, error: joinError } = useJoinRoom(); // Destructure more states
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   function handleBack() {
     router.back();
@@ -24,11 +29,33 @@ export default function DiscoverPage() {
     router.push("/create-room");
   }
 
-  async function handleJoin(roomTopic: string,roomMembers: number, roomId: number){
-    await joinRoom(roomId);
-    setRoom(roomTopic, roomMembers);
-    router.push("/chat-page");
-    toast.success(`Now entering ${roomTopic}`);
+  useEffect(() => {
+    if (isPending) {
+      setShowModal(true);
+      setModalMessage("Almost ready");
+    } else if (isConfirming) {
+      setModalMessage("Your journey to connection begins now");
+    } else if (isConfirmed) {
+      setShowModal(false);
+      toast.success("Successfully joined room!");
+      // Optionally navigate to the room page or update UI
+    } else if (joinError) {
+      setShowModal(false);
+      toast.error("Failed to join room.");
+    }
+  }, [isPending, isConfirming, isConfirmed, joinError]);
+
+
+  async function handleJoin(roomTopic: string, roomMembers: number, roomId: number) {
+    try {
+      await joinRoom(roomId);
+      setRoom(roomTopic, roomMembers);
+      router.push("/chat-page");
+      toast.success(`Now entering ${roomTopic}`);
+    } catch (error) {
+      console.error("Error joining room:", error);
+      throw error;
+    }
   };
 
   if (isLoading) {
@@ -51,7 +78,7 @@ export default function DiscoverPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-50 pb-24">
       <Header title="Discover rooms" />
-      <div className="sticky top-0 z-40 bg-background border-b border-border">
+      <div className="sticky top-0 z-30 bg-background border-b border-border">
         <div className="flex items-center justify-between px-4 py-4">
           <div className="flex w-full justify-between my-4">
             <button
@@ -81,13 +108,15 @@ export default function DiscoverPage() {
                   : "Public discussion"
               }
               members={`${room.memberCount} members`}
-              onJoin={() => handleJoin(room.topic,room.memberCount, room.id)}
+              onJoin={() => handleJoin(room.topic, room.memberCount, room.id)}
             />
           ))
         )}
       </div>
 
       <BottomNavigation />
+
+      <LoadingModal show={showModal} message={modalMessage} /> {/* Render the modal */}
     </div>
   );
 }

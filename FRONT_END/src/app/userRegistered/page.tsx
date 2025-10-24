@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -6,13 +6,11 @@ import UiButton from "../components/ui/modals/uiButton";
 import useUserStore from "@/store/userUserStore";
 import { useRouter } from "next/navigation";
 
-
 export default function RegisteredScreen() {
-
-  const router = useRouter()
-  const {name, avatar} = useUserStore()
+  const router = useRouter();
+  const { name, avatar } = useUserStore();
   const handleClick = () => {
-    router.push("/discover")
+    router.push("/discover");
   };
 
   return (
@@ -27,12 +25,9 @@ export default function RegisteredScreen() {
             <div className="text-6xl">👨‍🦰</div>
           </div> */}
 
-          <img
-            src="{avatar}"
-            alt="user Avatar"
-            width={200}
-            height={200}
-          />
+          <div className="rounded-full border-2 overflow-hidden">
+            <img src={avatar} alt="user Avatar" width={250} height={250} />
+          </div>
         </div>
 
         <div className="flex flex-col items-center text-center mb-16">
@@ -45,9 +40,10 @@ export default function RegisteredScreen() {
         </div>
 
         <div className="border mb-20 border-3">
-          <UiButton text="Continue to Novana" 
-          onClick={()=>handleClick()} 
-          loading={false} 
+          <UiButton
+            text="Continue to Novana"
+            onClick={() => handleClick()}
+            loading={false}
           />
         </div>
 

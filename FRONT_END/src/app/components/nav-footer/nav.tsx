@@ -11,20 +11,7 @@ import generateRandomNameFromAddress from "@/genUserData/genUserName";
 import generateAvatarFromAddress from "@/genUserData/genUserAvatar";
 
 
-function LoadingModal({ show, message }: { show: boolean; message: string }) {
-  if (!show) return null;
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="bg-white p-6 rounded-2xl shadow-lg text-center w-[90%] max-w-sm">
-        <h2 className="text-lg font-semibold mb-2">Please Wait</h2>
-        <p className="text-sm text-gray-600">{message}</p>
-        <div className="mt-4">
-          <div className="w-6 h-6 border-2 border-gray-400 border-t-gray-700 rounded-full animate-spin mx-auto" />
-        </div>
-      </div>
-    </div>
-  );
-}
+import LoadingModal from "../ui/modals/LoadingModal";
 
 export default function Nav() {
   const router = useRouter();
