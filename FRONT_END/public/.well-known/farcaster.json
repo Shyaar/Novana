@@ -6,7 +6,7 @@
     "homeUrl": "https://novana-sage.vercel.app",
     "imageUrl": "https://novana-sage.vercel.app/logo.png",
     "buttonTitle": "Launch Novana",
-    "splashImageUrl": "https://novana-sage.vercel.app/hero.png",
+    "splashImageUrl": "https://novana-sage.vercel.app/logo.png",
     "splashBackgroundColor": "#ffffff",
     "webhookUrl": "https://novana-sage.vercel.app/api/webhook",
     "subtitle": "peer support",
