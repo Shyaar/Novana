@@ -98,7 +98,7 @@ export default function Home() {
         <UiButton text="Get Started" onClick={() => initializeUser()} />
       </div>
 
-      <section className="flex flex-col  items-center absolute top-[645px] justify-center border">
+      <section className="flex flex-col  items-center absolute bottom-3 justify-center border">
         <h1 className="relative self-stretch mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-[#0711331a] items-center justify-center text-2xl tracking-[0] leading-[normal]">
           Talk. Heal. Grow.
         </h1>
