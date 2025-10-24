@@ -46,13 +46,22 @@ export default function ChatPage() {
             </p>
           </div>
         </div>
-        <UiButton 
-        text="vote to remove user"
-        onClick={()=>handleVote()}
-        />
+        <div className="hidden sm:block">
+          <UiButton 
+            text="vote to remove user"
+            onClick={()=>handleVote()}
+          />
+        </div>
+        <div className="sm:hidden">
+          <UiButton 
+            text="Vote"
+            onClick={()=>handleVote()}
+            fullWidth
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col flex-1 mx-24 ">
+      <div className="flex flex-col flex-1 md:mx-24 sm:mx-4 mx-2 ">
         {/* Chat Area */}
         <div className="flex-1 overflow-y-auto p-4 ">
           {/* Empty chat area - messages would go here */}
@@ -72,12 +81,12 @@ export default function ChatPage() {
             <button className="p-2 hover:bg-gray-100 rounded-full">
               <Send size={20} color="#999999" />
             </button>
-            <button
+            {/* <button
               className="p-3 rounded-full text-white"
               style={{ backgroundColor: "#071133" }}
             >
               <Mic size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

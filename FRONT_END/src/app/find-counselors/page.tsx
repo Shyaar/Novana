@@ -68,7 +68,7 @@ export default function FindCounselorsPage() {
         </div>
 
         {/* Counselor List */}
-        <div className="px-4 py-6 mx-24">
+        <div className="px-4 py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {counselors.map((counselor) => (
               <CounselorCard

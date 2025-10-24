@@ -14,7 +14,7 @@ export default function RegisteredScreen() {
   };
 
   return (
-    <main className="bg-white w-full min-w-[480px] min-h-screen relative flex flex-col items-center justify-center px-8">
+    <main className="bg-white w-full min-h-screen relative flex flex-col items-center justify-center px-8">
       <div className="flex flex-col items-center w-full max-w-md">
         <h1 className="[font-family:'Poppins',Helvetica] font-semibold text-[#071133] text-[28px] tracking-[0] leading-normal mb-12">
           Welcome to Novana
@@ -25,8 +25,14 @@ export default function RegisteredScreen() {
             <div className="text-6xl">👨‍🦰</div>
           </div> */}
 
-          <div className="rounded-full border-2 overflow-hidden">
-            <img src={avatar} alt="user Avatar" width={250} height={250} />
+          <div className="rounded-full border-2 border-green-400 overflow-hidden">
+            <img
+              src={avatar}
+              alt={name}
+              width={200}
+              height={200}
+            />
+            {/* <img src={avatar} alt="user Avatar" width={250} height={250} /> */}
           </div>
         </div>
 
