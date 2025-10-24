@@ -16,7 +16,13 @@ export default function DiscoverPage() {
   const router = useRouter();
   const { setRoom } = useRoomStore();
   const { rooms, isLoading, isError, refetch } = useReadRooms();
-  const { joinRoom, isPending, isConfirming, isConfirmed, error: joinError } = useJoinRoom(); // Destructure more states
+  const {
+    joinRoom,
+    isPending,
+    isConfirming,
+    isConfirmed,
+    error: joinError,
+  } = useJoinRoom(); // Destructure more states
 
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
@@ -45,8 +51,11 @@ export default function DiscoverPage() {
     }
   }, [isPending, isConfirming, isConfirmed, joinError]);
 
-
-  async function handleJoin(roomTopic: string, roomMembers: number, roomId: number) {
+  async function handleJoin(
+    roomTopic: string,
+    roomMembers: number,
+    roomId: number
+  ) {
     try {
       await joinRoom(roomId);
       setRoom(roomTopic, roomMembers);
@@ -56,7 +65,7 @@ export default function DiscoverPage() {
       console.error("Error joining room:", error);
       throw error;
     }
-  };
+  }
 
   if (isLoading) {
     return (
@@ -91,7 +100,6 @@ export default function DiscoverPage() {
           </div>
         </div>
       </div>
-
       <div className="px-4 py-4 grid gap-4">
         {rooms.length === 0 ? (
           <p className="text-center text-gray-500 mt-8">
@@ -103,9 +111,7 @@ export default function DiscoverPage() {
               key={room.id}
               title={room.topic}
               description={
-                room.isPrivate
-                  ? "Private conversation"
-                  : "Public discussion"
+                room.isPrivate ? "Private conversation" : "Public discussion"
               }
               members={`${room.memberCount} members`}
               onJoin={() => handleJoin(room.topic, room.memberCount, room.id)}
@@ -113,10 +119,9 @@ export default function DiscoverPage() {
           ))
         )}
       </div>
-
       <BottomNavigation />
-
-      <LoadingModal show={showModal} message={modalMessage} /> {/* Render the modal */}
+      <LoadingModal show={showModal} message={modalMessage} />{" "}
+      {/* Render the modal */}
     </div>
   );
 }
