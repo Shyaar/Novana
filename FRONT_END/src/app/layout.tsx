@@ -10,8 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { headers } from "next/headers";
 import ContextProvider from "@/app/context";
-import Nav from "./components/nav-footer/nav";
-import Footer from "./components/nav-footer/footer";
+
 
 export const metadata: Metadata = {
   title: "Novana",
@@ -57,9 +56,9 @@ export default async function RootLayout({
           theme="light"
         />
         <ContextProvider cookies={cookies}>
-          <Nav />
+
           {children}
-          <Footer />
+
         </ContextProvider>
       </body>
     </html>
