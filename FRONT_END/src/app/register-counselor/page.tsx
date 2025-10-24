@@ -74,17 +74,17 @@ export default function CounselorRegistrationPage() {
           className="p-2 hover:bg-gray-100 rounded-lg"
           onClick={() => handleBack()}
         >
-          <div className="flex">
-            <ArrowLeft size={24} color="#071133" />
+          <div className="flex text-sm items-center gap-2">
+            <ArrowLeft size={14} color="#071133" />
             <p>Back</p>
           </div>
         </button>
       </div>
 
-      <form onSubmit={handleSubmit} className="px-4 py-6 mx-24">
+      <form onSubmit={handleSubmit} className="px-4 py-6">
         {/* Profile Info */}
         <div className="bg-white rounded-2xl p-6 shadow-sm mb-8">
-          <h2 className="text-2xl font-semibold text-[#071133] mb-4">
+          <h2 className="text-lg font-semibold text-[#071133] mb-4">
             Counselor Information
           </h2>
 
