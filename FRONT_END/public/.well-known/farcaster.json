@@ -24,5 +24,12 @@
     "ogImageUrl": "https://novana-sage.vercel.app/logo.png",
     "ogDescription": "Safe, private peer support for mental wellness in decentralized, stigma-free communities.",
     "castShareUrl": "https://novana-sage.vercel.app/"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEzNTA3MzQsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhkNDdjNTEzNTE0NTQ1NTNFMTViNmZlOGZBYUFCMUZlOTFkMEMzZjBjIn0",
+    "payload": "eyJkb21haW4iOiJub3ZhbmEtc2FnZS52ZXJjZWwuYXBwIn0",
+    "signature": "k0k//tkJ1BfCFCjy4UwxCseGKqXGnHWItA3LchsIPbwoEOlX1l9/pjNCh1icZTczk8Uva3JPuJFrV5oChF4yxBs="
   }
+
+  
 }
