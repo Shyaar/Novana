@@ -10,7 +10,6 @@ import { useEffect, useRef, useState } from "react";
 import UiButton from "./components/ui/modals/uiButton";
 import { useRouter } from "next/navigation";
 
-
 declare global {
   interface Window {
     fc?: {
@@ -25,22 +24,31 @@ export default function Home() {
   const router = useRouter();
   const { setUser } = useUserStore();
   const { userData, isLoading, isRegistered } = useReadUsers();
-  const { register, isPending, isConfirming, isConfirmed, error: writeError } =
-    useRegisterUser();
+  const {
+    register,
+    isPending,
+    isConfirming,
+    isConfirmed,
+    error: writeError,
+  } = useRegisterUser();
   const hasRegistered = useRef(false);
+  const farcasterId = window.fc?.user?.fid;
 
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
-  useEffect(() => {
-    initializeUser();
-  }, [isLoading, isPending, isConfirming, isConfirmed, writeError]);
+  useEffect(() => {}, [
+    isLoading,
+    isPending,
+    isConfirming,
+    isConfirmed,
+    writeError,
+    farcasterId,
+  ]);
 
   async function initializeUser() {
     if (isLoading || hasRegistered.current) return;
 
-
-    const farcasterId = window.fc?.user?.fid;
     if (!farcasterId) {
       toast.error("Farcaster ID not detected. Please log in.");
       return;
@@ -87,11 +95,13 @@ export default function Home() {
       />
 
       <div className="my-4">
-        <UiButton text="Get Started" onClick={initializeUser} />
+        <UiButton text="Get Started" onClick={() => initializeUser()} />
       </div>
 
       <section className="flex flex-col w-[200px] items-center justify-center">
-        <h1 className="text-[#071133] font-semibold text-2xl">Talk. Heal. Grow.</h1>
+        <h1 className="text-[#071133] font-semibold text-2xl">
+          Talk. Heal. Grow.
+        </h1>
       </section>
     </main>
   );
