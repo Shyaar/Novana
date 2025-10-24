@@ -38,7 +38,7 @@ export default function CounselorProfilePage() {
       <Header title="My Profile" />
 
       <div className="flex items-center justify-between px-4 py-4">
-        <div className="flex w-full justify-between my-4">
+        <div className="flex w-full justify-between my-2">
           <button
             className="p-2 hover:bg-gray-100 rounded-lg"
             onClick={() => handleBack()}

@@ -11,7 +11,7 @@ export default function RoomCard({ title, members, onClick }: RoomCardProps) {
   return (
     <div
       onClick={onClick}
-      className="bg-white rounded-3xl p-5 flex items-center justify-between cursor-pointer w-full"
+      className="bg-white  p-5 flex items-center justify-between cursor-pointer w-full"
     >
       <div className="flex items-center gap-4 flex-1">
         <div className="w-20 h-20 bg-[#071133] rounded-2xl flex-shrink-0" />

@@ -77,7 +77,7 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-white w-full relative flex flex-col items-center justify-center mt-6">
+    <main className="bg-white w-full h-screen relative flex flex-col items-center justify-center mt-6">
       <Image
         className="w-full p-6 h-auto md:max-w-md"
         src="/hero.png"

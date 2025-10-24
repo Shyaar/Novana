@@ -33,7 +33,7 @@ export default function EditCounselorProfileModal({ isOpen, onClose, counselorDa
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-2xl p-6 shadow-lg w-full max-w-md">
+      <div className="bg-white  p-6 shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold text-foreground mb-4">Edit Profile</h2>
 
         <div className="space-y-4">
@@ -42,7 +42,7 @@ export default function EditCounselorProfileModal({ isOpen, onClose, counselorDa
             <input
               type="text"
               name="name"
-              className="mt-2 bg-gray-100 rounded-lg px-4 py-3 text-foreground w-full"
+              className="mt-2 bg-gray-100  px-4 py-3 text-foreground w-full"
               value={formData.name}
               onChange={handleChange}
             />
@@ -53,7 +53,7 @@ export default function EditCounselorProfileModal({ isOpen, onClose, counselorDa
             <input
               type="text"
               name="specialization"
-              className="mt-2 bg-gray-100 rounded-lg px-4 py-3 text-foreground w-full"
+              className="mt-2 bg-gray-100  px-4 py-3 text-foreground w-full"
               value={formData.specialization}
               onChange={handleChange}
             />
@@ -64,7 +64,7 @@ export default function EditCounselorProfileModal({ isOpen, onClose, counselorDa
             <input
               type="text"
               name="licenseNumber"
-              className="mt-2 bg-gray-100 rounded-lg px-4 py-3 text-foreground w-full"
+              className="mt-2 bg-gray-100  px-4 py-3 text-foreground w-full"
               value={formData.licenseNumber}
               onChange={handleChange}
             />
@@ -75,7 +75,7 @@ export default function EditCounselorProfileModal({ isOpen, onClose, counselorDa
             <input
               type="text"
               name="fee"
-              className="mt-2 bg-gray-100 rounded-lg px-4 py-3 text-foreground w-full"
+              className="mt-2 bg-gray-100  px-4 py-3 text-foreground w-full"
               value={formData.fee}
               onChange={handleChange}
             />

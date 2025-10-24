@@ -12,7 +12,7 @@ interface BookingCardProps {
 
 export default function BookingCard({ name, date, days, avatarUrl, onClick }: BookingCardProps) {
   return (
-    <div onClick={onClick} className="bg-white rounded-3xl p-5 flex items-center justify-between cursor-pointer">
+    <div onClick={onClick} className="bg-white p-5 flex items-center justify-between cursor-pointer">
       <div className="flex items-center gap-4 flex-1">
         <div className="w-16 h-16 rounded-full border-3 border-[#FCD34D] bg-[#D1D5DB] flex-shrink-0 overflow-hidden">
           {avatarUrl && (

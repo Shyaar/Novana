@@ -45,7 +45,7 @@ export default function VoteToRemovePage() {
         title="Select user to Remove from this room"
       />
       <div className="mx-24">
-        <div className="flex w-full justify-end my-4">
+        <div className="flex w-full justify-end my-2">
           <button
             className="p-2 hover:bg-gray-100 rounded-lg"
             onClick={() => handleBack()}

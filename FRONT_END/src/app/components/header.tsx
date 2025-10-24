@@ -32,7 +32,7 @@ export function Header({
           {title && (
             <h1 className="text-lg font-bold text-foreground">{title}</h1>
           )}
-          <div className="bg-white rounded-full p-2">
+          <div className="bg-white p-2">
             {showSearch && <Search className="h-5 w-5 text-muted-foreground" />}
           </div>
         </div>

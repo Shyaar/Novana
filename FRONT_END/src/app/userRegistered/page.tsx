@@ -14,7 +14,7 @@ export default function RegisteredScreen() {
   };
 
   return (
-    <main className="bg-white w-full min-w-[480px] min-h-[770px] relative flex flex-col items-center justify-center px-8">
+    <main className="bg-white w-full min-w-[480px] min-h-screen relative flex flex-col items-center justify-center px-8">
       <div className="flex flex-col items-center w-full max-w-md">
         <h1 className="[font-family:'Poppins',Helvetica] font-semibold text-[#071133] text-[28px] tracking-[0] leading-normal mb-12">
           Welcome to Novana

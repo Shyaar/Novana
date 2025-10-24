@@ -69,7 +69,7 @@ export default function CounselorRegistrationPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-50 pb-24">
       <Header title="Register as a Counselor" />
 
-      <div className="flex w-full justify-end my-4">
+      <div className="flex w-full justify-end my-2">
         <button
           className="p-2 hover:bg-gray-100 rounded-lg"
           onClick={() => handleBack()}

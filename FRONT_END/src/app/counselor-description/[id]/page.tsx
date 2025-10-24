@@ -78,7 +78,7 @@ export default function CounselorDetailsPage() {
       <Header showSearch={false} showMenu={false} />
       <div className="mx-24">
         <div className="">
-        <div className="flex w-full justify-start my-4">
+        <div className="flex w-full justify-start my-2">
           <button
             className="p-2 hover:bg-gray-100 rounded-lg"
             onClick={() => handleBack()}

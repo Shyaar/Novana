@@ -23,7 +23,7 @@ export default function UserProfilePage() {
 
       <div className="sticky top-0 z-40 bg-background border-b border-border">
         <div className="flex items-center justify-between px-4 py-4">
-          <div className="flex w-full justify-between my-4">
+          <div className="flex w-full justify-between my-2">
             <button
               className="p-2 hover:bg-gray-100 rounded-lg"
               onClick={() => handleBack()}

@@ -25,7 +25,7 @@ export default function CounselorCard({
   onViewDetails,
 }: CounselorCardProps) {
   return (
-    <div className="bg-white rounded-3xl overflow-hidden" onClick={onViewDetails}>
+    <div className="bg-white r overflow-hidden" onClick={onViewDetails}>
       <div className="relative h-56 bg-[#D1D5DB]">
         {imageUrl && (
           <Image

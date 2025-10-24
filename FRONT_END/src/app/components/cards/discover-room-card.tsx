@@ -9,7 +9,7 @@ interface DiscoverRoomCardProps {
 
 export default function DiscoverRoomCard({ title, description, members, onJoin }: DiscoverRoomCardProps) {
   return (
-    <div className="bg-white border-2 border-[#071133] rounded-3xl p-5">
+    <div className="bg-white border-2 border-[#071133]  p-5">
       <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-[#071133] text-lg tracking-[0] mb-2">
         {title}
       </h3>
