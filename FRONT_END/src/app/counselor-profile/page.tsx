@@ -17,11 +17,11 @@ export default function CounselorProfilePage() {
   }
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [counselorData, setCounselorData] = useState<Counselor>({
-    name: "Alfredo Calzoni",
+    name: "Tewlve",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Id vel quis pretium orci. Vitae nunc.",
+      "welcome to novana",
     specialization: "Counselor",
-    licenseNumber: "Md-jhjdaxbj-001",
+    licenseNumber: "123456",
     fee: "1.5 Eth",
   });
 

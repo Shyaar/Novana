@@ -12,11 +12,11 @@ export default function UserBookingsPage() {
   const [activeTab, setActiveTab] = useState<TabType>("active")
 
   const bookings = [
-    { id: 1, name: "calm onion", date: "28-11-2025", days: "2:23" },
-    { id: 2, name: "calm onion", date: "28-11-2025", days: "2:23" },
-    { id: 3, name: "calm onion", date: "28-11-2025", days: "2:23" },
-    { id: 4, name: "calm onion", date: "28-11-2025", days: "2:23" },
-    { id: 5, name: "calm onion", date: "28-11-2025", days: "2:23" },
+    { id: 1, name: "Twelve", date: "Waiting for confirmation", days: ")" },
+    // { id: 2, name: "calm onion", date: "28-11-2025", days: "2:23" },
+    // { id: 3, name: "calm onion", date: "28-11-2025", days: "2:23" },
+    // { id: 4, name: "calm onion", date: "28-11-2025", days: "2:23" },
+    // { id: 5, name: "calm onion", date: "28-11-2025", days: "2:23" },
   ]
 
   return (

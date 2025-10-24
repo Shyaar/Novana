@@ -48,6 +48,8 @@ export default function CounselorRegistrationPage() {
     const specializationIndex = specializations.indexOf(
       formData.specialization
     );
+    toast.info("Verifying License")
+    router.push("/discover")
     await registerCounselor(
       formData.name,
       specializationIndex,
