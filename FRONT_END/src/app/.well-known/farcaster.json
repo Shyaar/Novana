@@ -10,24 +10,24 @@
   "miniapp": {
     "version": "1",
     "name": "Novana",
-    "homeUrl": "https://novanaxyz.vercel.app",
-    "iconUrl": "https://novanaxyz.vercel.app/icon.png",
-    "splashImageUrl": "https://novanaxyz.vercel.app/splash.png",
+    "homeUrl": "https://novana-sage.vercel.app",
+    "iconUrl": "https://novana-sage.vercel.app/icon.png",
+    "splashImageUrl": "https://novana-sage.vercel.app/splash.png",
     "splashBackgroundColor": "#ffffff",
-    "webhookUrl": "https://novanaxyz.vercel.app/api/webhook",
+    "webhookUrl": "https://novana-sage.vercel.app/api/webhook",
     "subtitle": "Decentralized peer support",
     "description": "Decentralized, privacy-focused peer-support mini-app for mental health.",
     "screenshotUrls": [
-      "https://novanaxyz.vercel.app/screenshots/1.png",
-      "https://novanaxyz.vercel.app/screenshots/2.png"
+      "https://novana-sage.vercel.app/screenshots/1.png",
+      "https://novana-sage.vercel.app/screenshots/2.png"
     ],
     "primaryCategory": "social",
     "tags": ["mental-health", "community", "decentralized"],
-    "heroImageUrl": "https://novanaxyz.vercel.app/og.png",
+    "heroImageUrl": "https://novana-sage.vercel.app/og.png",
     "tagline": "Privacy-first peer support for everyone",
     "ogTitle": "Novana",
     "ogDescription": "Join safe, private communities for mental wellness — decentralized and stigma-free.",
-    "ogImageUrl": "https://novanaxyz.vercel.app/og.png",
+    "ogImageUrl": "https://novana-sage.vercel.app/og.png",
     "noindex": true
   }
 }
