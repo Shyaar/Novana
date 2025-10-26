@@ -1,7 +1,8 @@
-Overview
+**Welcome to NOVANA**
 Novana is a decentralized safe space mini app designed for people facing a broad range of challenges such as addiction, depression, anxiety, and other personal struggles. It provides an identity-free environment where users can safely express themselves and talk about their problems anonymously. Leveraging blockchain-based decentralized identity and encrypted communication, Novana ensures complete privacy, fostering open support and connection without exposing user identities.
 
-Features Implemented
+**Features Implemented**
+
 Joining Rooms
 Users can join anonymous peer support chat rooms tailored to their specific challenges, creating a safe environment for mutual understanding and empathy.
 
@@ -14,7 +15,8 @@ Users can confidentially book private counseling sessions with registered profes
 Getting All Booked Sessions
 Both users and counselors can view and manage their booked sessions securely.
 
-Features To Be Implemented
+**Features To Be Implemented**
+
 Backend API and database for session management
 
 Real-time messaging, voice, and video communication
